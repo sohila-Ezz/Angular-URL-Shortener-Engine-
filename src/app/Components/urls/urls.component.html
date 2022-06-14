@@ -1,0 +1,22 @@
+
+<table class="table table-striped dark">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">URL Shortener</th>
+        <th scope="col">Open</th>
+        <th scope="col">Update</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let url of Urls; let i=index">
+        
+        <td> {{i+1}}</td>
+        <td> {{url.shortUrl}}</td>
+        <td><button (click)="OpenURl(url.originalUrl)" class="btn BuyStyle">Open</button></td> 
+        <td><a role="button" routerLinkActive="" [routerLink]="['/URls',url.id]" class="btn BuyStyle">Update</a></td> 
+
+      </tr> 
+    </tbody>
+
+  </table>
